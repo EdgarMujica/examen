@@ -1,0 +1,32 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="lista-proyecto">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <ul>
+      <li>num1</li>
+       <li>num2</li>
+        <li>num3</li>
+         <li>num4</li>
+    </ul>
+    
+  </template>
+
+  <script>
+   
+    class ListaProyecto extends Polymer.Element {
+      static get is() { return 'lista-proyecto'; }
+      static get properties() {
+        return {
+        
+        };
+      }
+    }
+
+    window.customElements.define(ListaProyecto.is, ListaProyecto);
+  </script>
+</dom-module>

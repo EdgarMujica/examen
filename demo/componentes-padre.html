@@ -1,0 +1,30 @@
+<link rel="import" href="../../polymer/polymer-element.html">
+<link rel="import" href="../lista-proyecto.html">
+<link rel="import" href="../botones-proyecto.html">
+
+<dom-module id="componentes-padre">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+   
+    <botones-proyecto></botones-proyecto>
+    <lista-proyecto></lista-proyecto>
+  </template>
+
+  <script>
+
+    class componentePadre extends Polymer.Element {
+      static get is() { return 'componentes-padre'; }
+      static get properties() {
+        return {
+        
+        };
+      }
+    }
+
+    window.customElements.define(componentePadre.is, componentePadre);
+  </script>
+</dom-module>

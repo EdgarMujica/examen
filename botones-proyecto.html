@@ -1,0 +1,54 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="botones-proyecto">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <div hidden$="{{hide}}">
+    <h1>Titulo del proyecto</h1>
+    <section>
+    Descripcion: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    </section>
+    <button id="btn1" on-click="ver">
+      <slot>Boton1</slot>
+    </button>
+    
+    <button id="btn2">
+      <slot>Boton2</slot>
+    </button>
+    </div>
+  </template>
+
+  <script>
+    /**
+     * `botones-proyecto`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class BotonesProyecto extends Polymer.Element {
+      static get is() { return 'botones-proyecto'; }
+      static get properties() {
+        return {
+          hide: {
+             type: Boolean,
+             value: false, 
+             notify:true
+           
+          },
+          ver: function() {
+                this.hide = !this.hide
+
+            } 
+        };
+      }
+    }
+
+    window.customElements.define(BotonesProyecto.is, BotonesProyecto);
+  </script>
+</dom-module>
